@@ -1,0 +1,27 @@
+﻿<Window x:Class="CanonAutomation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CanonAutomation"
+        mc:Ignorable="d"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        Title="Canon Automation" Height="200" Width="400" ShowInTaskbar="False" WindowState="Minimized" Closing="Mainform_Formclosing" Icon="./favicon.ico" Background="#FF1B1616" BorderBrush="#FF1B1616">
+    <Grid Background="#FF1B1616" OpacityMask="#FF1B1616">
+
+        <tb:TaskbarIcon
+      IconSource="./favicon.ico"
+      ToolTipText="Canon Automation">
+
+        <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu 
+      Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
+                    <MenuItem Focusable="False" IsCheckable="False" Header="Show" Foreground="#FFD0C5C5" Click="MenuItem_Click_Show" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616"/>
+                    <MenuItem Header="Quit" Foreground="#FFD0C5C5" Click="MenuItem_Click_Quit" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616"/>
+            </ContextMenu>
+        </tb:TaskbarIcon.ContextMenu>
+
+        </tb:TaskbarIcon>
+
+    </Grid>
+</Window>
