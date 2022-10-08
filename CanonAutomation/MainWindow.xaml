@@ -6,22 +6,34 @@
         xmlns:local="clr-namespace:CanonAutomation"
         mc:Ignorable="d"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        Title="Canon Automation" Height="200" Width="400" ShowInTaskbar="False" WindowState="Minimized" Closing="Mainform_Formclosing" Icon="./favicon.ico" Background="#FF1B1616" BorderBrush="#FF1B1616">
-    <Grid Background="#FF1B1616" OpacityMask="#FF1B1616">
+        Title="Canon Automation" Width="400" MinWidth="400" MaxWidth="400" Height="200" MinHeight="200" MaxHeight="200" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowState="Normal" Closing="Mainform_Formclosing" Icon="./favicon.ico" Background="#FF1B1616" BorderBrush="#FF1B1616">
+    <Grid Background="#FF353131" OpacityMask="#FF1B1616">
 
-        <tb:TaskbarIcon
-      IconSource="./favicon.ico"
-      ToolTipText="Canon Automation">
+        <TextBlock Text="Exported path:" VerticalAlignment="Top" FontSize="14" Margin="10,5,0,0" HorizontalAlignment="Left" Width="auto"></TextBlock>
+        <TextBlock Background="Gray" x:Name="inputPath" Text="D:/Bilder R10/Exported" VerticalAlignment="Top" FontSize="14" Margin="10,25,10,0"></TextBlock>
+        <Button Opacity="0.4" Content="Choose directory" Margin="10,50,0,0" Click="Button_Click" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="99"></Button>
+        <Button Opacity="0.4" Content="Create Comparison" Margin="120,50,0,0" Click="MenuItem_Click_Compare" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"></Button>
 
-        <tb:TaskbarIcon.ContextMenu>
-                <ContextMenu 
-      Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
-                    <MenuItem Focusable="False" IsCheckable="False" Header="Show" Foreground="#FFD0C5C5" Click="MenuItem_Click_Show" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616"/>
-                    <MenuItem Header="Quit" Foreground="#FFD0C5C5" Click="MenuItem_Click_Quit" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616"/>
-            </ContextMenu>
-        </tb:TaskbarIcon.ContextMenu>
-
+        <tb:TaskbarIcon IconSource="./favicon.ico" ToolTipText="Canon Automation">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
+                    <MenuItem Header="Create Comparison" Foreground="#FFD0C5C5" Click="MenuItem_Click_Compare" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
+                        <MenuItem.Icon>
+                            <Image Source="./icon_compare.png" Stretch="Fill"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Show" Foreground="#FFD0C5C5" Click="MenuItem_Click_Show" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
+                        <MenuItem.Icon>
+                            <Image Source="./icon_show.png" Stretch="Fill"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Quit" Foreground="#FFD0C5C5" Click="MenuItem_Click_Quit" Background="#FF1B1616" BorderBrush="#FF1B1616" OpacityMask="#FF1B1616">
+                        <MenuItem.Icon>
+                            <Image Source="./icon_quit.png" Stretch="Fill"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
-
     </Grid>
 </Window>

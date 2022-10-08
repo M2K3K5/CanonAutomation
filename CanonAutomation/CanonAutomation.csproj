@@ -5,11 +5,18 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="992680.png" />
+    <None Remove="9926801.png" />
+    <None Remove="992681.png" />
     <None Remove="favicon.ico" />
     <None Remove="icon3.ico" />
+    <None Remove="icon_compare.png" />
+    <None Remove="icon_quit.png" />
+    <None Remove="icon_show.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="icon_show.png" />
+    <Resource Include="icon_quit.png" />
+    <Resource Include="icon_compare.png" />
     <Resource Include="favicon.ico" />
   </ItemGroup>
 
