@@ -36,8 +36,8 @@ namespace CanonAutomation
 
         public void CanonMain()
         {
-            MoveFilesRecursively(@"F:\DCIM\100CANON", @"D:\Bilder R10\");
-            Process.Start("explorer.exe", @"D:\Bilder R10");
+            MoveFilesRecursively(@"G:\DCIM\100CANON", @"C:\Users\seb\Pictures\Bilder R10\");
+            Process.Start("explorer.exe", @"C:\Users\seb\Pictures\Bilder R10");
             Process.Start(@"C:\Program Files\Adobe\Adobe DNG Converter\Adobe DNG Converter.exe");
         }
 
@@ -125,7 +125,7 @@ namespace CanonAutomation
                     case USBDetector.NewUsbDeviceConnected:
                         Trace.WriteLine("New USB Detected");
 
-                        if(Directory.Exists(@"F:\DCIM\100CANON"))
+                        if(Directory.Exists(@"G:\DCIM\100CANON"))
                         {
                             Trace.WriteLine("Canon SD-Card Detected");
                             CanonMain();
